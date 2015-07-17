@@ -6,6 +6,7 @@
 
     $scope.timeRemaining = 0;
     var timer = null;
+    var fullTime = 0;
 
     function stop(){
       $interval.cancel(timer);
@@ -27,14 +28,27 @@
       pageService.alert();
     }
 
-    function init(){
-      $scope.timeRemaining = roomService.roomSession.timeoutSeconds;
+    function onRoomGet(data){
+
+      $scope.timeRemaining = data.remainingSeconds;
+      fullTime = data.timeoutSeconds;
+
       start();
+
+    }
+
+    function onRoomGetError(e){
+      console.log('Could not retrieve room details: '+e);
+    }
+
+    function init(){
+      roomService.get().then( onRoomGet, onRoomGetError );
     }
 
     $scope.onReset = function(){
       stop();
-      init();
+      $scope.timeRemaining = fullTime;
+      start();
     };
 
     $scope.$on('$viewContentLoaded', init);

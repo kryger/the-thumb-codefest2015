@@ -107,6 +107,7 @@ public class MemoryThumbRepositoryImpl implements ThumbRepository {
 	public void startTalk(String roomId) {
 		checkRoomExistence(roomId);
 		rooms.get(roomId).setState(RoomState.STARTED);
+		rooms.get(roomId).setStartTime(new Date());
 		if (!rooms.get(roomId).getVotes().isEmpty()) {
 			rooms.get(roomId).getArchivedVotes()
 					.add(rooms.get(roomId).getVotes());

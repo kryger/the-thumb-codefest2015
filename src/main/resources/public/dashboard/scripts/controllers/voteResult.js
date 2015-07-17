@@ -21,7 +21,7 @@
     }
 
     function init(){
-      voteService.getResult(roomService.roomSession.id).then( onResult, onResultError );
+      voteService.getResult(roomService.id).then( onResult, onResultError );
     }
 
     $scope.restart = function(){

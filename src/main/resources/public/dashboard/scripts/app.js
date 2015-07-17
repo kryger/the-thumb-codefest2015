@@ -9,19 +9,19 @@
           templateUrl: 'views/createMeeting.html',
           controller: 'CreateMeetingCtrl'
         })
-        .when('/startMeeting', {
+        .when('/startMeeting/:id?/', {
           templateUrl: 'views/startMeeting.html',
           controller: 'StartMeetingCtrl'
         })
-        .when('/countdown', {
+        .when('/countdown/:id?/', {
           templateUrl: 'views/countdown.html',
           controller: 'CountdownCtrl'
         })
-        .when('/voteResult', {
+        .when('/voteResult/:id?/', {
           templateUrl: 'views/voteResult.html',
           controller: 'VoteResultCtrl'
         })
-        .when('/alert', {
+        .when('/alert/:id?/', {
           templateUrl: 'views/alert.html',
           controller: 'AlertCtrl'
         })

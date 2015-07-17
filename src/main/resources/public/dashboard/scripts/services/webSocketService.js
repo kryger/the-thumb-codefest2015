@@ -4,7 +4,7 @@
   'use strict';
 
   angular.module('thumbDashboard')
-  .factory('webSocketService', function($timeout, roomService) {
+  .factory('webSocketService', function($timeout, roomService, urlService) {
 
     var service = {};
     var stompClient = null;
@@ -22,8 +22,8 @@
     }
 
     service.readAttendees = function(onData){
-      var meetingId = roomService.roomSession.id;
-      doWebSocket('http://localhost:8080/thethumb', '/topic/attendees/' + meetingId, onData);
+      var meetingId = roomService.id;
+      doWebSocket( urlService.server('thethumb'), '/topic/attendees/' + meetingId, onData);
     };
 
     return service;

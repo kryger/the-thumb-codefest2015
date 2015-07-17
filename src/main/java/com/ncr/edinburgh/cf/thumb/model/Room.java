@@ -9,7 +9,6 @@ import java.util.Objects;
 import java.util.concurrent.ConcurrentHashMap;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.google.common.base.Strings;
 import com.ncr.edinburgh.cf.thumb.util.RandomString;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
@@ -19,6 +18,7 @@ public class Room {
 	private String id;
 	private int timeoutSeconds;
 	private Date endDate;
+	private Date startTime;
 	private String name;
 	private final List<Map<Long, Vote>> archivedVotes;
 	private Map<Long, Vote> votes;
@@ -33,11 +33,12 @@ public class Room {
 		this.archivedVotes = new ArrayList<>();
 		this.users = new ArrayList<>();
 		this.state = RoomState.STOPPED;
+		this.startTime = new Date();
 	}
 
 	public Room(final String name) {
 		this();
-		if (!Strings.isNullOrEmpty(name)) {
+		if (name != null && name.length() > 0) {
 			this.name = name;
 		}
 	}
@@ -112,16 +113,29 @@ public class Room {
 		this.votes = new ConcurrentHashMap<>();
 	}
 
-	public boolean isVotingAllowed() {
-		return this.state.equals(RoomState.STARTED);
-	}
-
 	public void setState(RoomState state) {
 		this.state = state;
 	}
 
 	public RoomState getState() {
 		return state;
+	}
+
+	public Date getStartTime() {
+		return this.startTime;
+	}
+
+	public void setStartTime(Date date) {
+		this.startTime = date;
+	}
+
+	public boolean isVotingAllowed() {
+		return this.state.equals(RoomState.STARTED);
+	}
+
+	public long getRemainingSeconds() {
+		return Math.max(0, this.timeoutSeconds
+				- (new Date().getTime() - this.startTime.getTime()) / 1000);
 	}
 
 }

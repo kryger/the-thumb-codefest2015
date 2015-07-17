@@ -16,12 +16,16 @@
       $scope.roomCreationError = angular.isObject(error) ? error.message : 'Could not connect to server';
     }
 
+    function onRoomCreation(data){
+      pageService.startMeeting(data.id);
+    }
+
     $scope.onCreateMeeting = function(){
       console.log('Creating meeting');
       createInProgress = true;
       $scope.roomCreationError = '';
 
-      roomService.create($scope.meetingName, $scope.timeout, $scope.alertPeriod).then(pageService.startMeeting, onRoomCreationError);
+      roomService.create($scope.meetingName, $scope.timeout, $scope.alertPeriod).then( onRoomCreation, onRoomCreationError);
     };
 
     $scope.showCreationError = function(){

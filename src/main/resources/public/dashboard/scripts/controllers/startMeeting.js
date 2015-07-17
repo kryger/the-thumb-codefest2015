@@ -8,7 +8,7 @@
 
     $scope.attendees = [];
 
-    $scope.roomSession = roomService.roomSession;
+    $scope.roomSession = undefined;
 
     $scope.onStartMeeting = function(){
       console.log('Starting meeting');
@@ -30,10 +30,29 @@
       }
     }
 
-    webSocketService.readAttendees( function(data){
-      console.log('Updating attendees', data);
-      parseAttendees(data.body);
-    });
+    function onRoomGet(data){
+
+      $scope.roomSession = data;
+
+      $scope.attendees = data.users;
+
+      webSocketService.readAttendees( function(data){
+        console.log('Updating attendees', data);
+        parseAttendees(data.body);
+      });
+
+    }
+
+    function onRoomGetError(e){
+      $scope.startError = 'Could not retrieve room details: '+e;
+    }
+
+
+    function init(){
+      roomService.get().then( onRoomGet, onRoomGetError );
+    }
+
+    $scope.$on('$viewContentLoaded', init);
 
   });
 

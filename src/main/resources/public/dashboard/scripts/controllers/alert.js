@@ -28,7 +28,7 @@
     }
 
     function init(){
-      $scope.timeRemaining = parseInt(roomService.roomSession.alertPeriod, 10);
+      $scope.timeRemaining = parseInt(roomService.alertPeriod, 10);
       if( $scope.timeRemaining === 0 ){
         outOfTime();
       }
