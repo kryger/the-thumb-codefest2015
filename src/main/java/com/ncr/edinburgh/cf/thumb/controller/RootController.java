@@ -8,7 +8,6 @@ public class RootController {
 
 	@RequestMapping("/")
 	public String index() {
-		return "Hello NCR Edinburgh! This is The Thumb Server";
+		return "<html><head><title>The Thumb</title><script type=\"text/javascript\">window.location.href = 'client/index.html';</script></head><body></body></html>";
 	}
-
 }
