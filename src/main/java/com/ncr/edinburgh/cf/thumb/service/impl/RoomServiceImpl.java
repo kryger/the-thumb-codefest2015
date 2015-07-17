@@ -70,7 +70,9 @@ public class RoomServiceImpl implements RoomService {
 
 	@Override
 	public boolean unregisterRoomUser(String roomId, String userId) {
-		return thumbRepository.unregisterRoomUser(roomId, userId);
+		boolean result = thumbRepository.unregisterRoomUser(roomId, userId);
+		messageAttendees(roomId);
+		return result;
 	}
 
 	@Override
