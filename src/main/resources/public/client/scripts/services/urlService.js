@@ -7,7 +7,7 @@
     .factory('urlService', function($location) {
 
       var service = {};
-      var SERVER_PORT = '8080';
+      var SERVER_PORT = '80';
 
       function url(){
         return $location.protocol() + '://' + $location.host() + ':' + SERVER_PORT + '/';

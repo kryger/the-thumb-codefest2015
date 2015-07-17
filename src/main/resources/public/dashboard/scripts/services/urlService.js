@@ -9,7 +9,7 @@
     var service = {};
 
     service.server = function(suffix){
-      var SERVER_PORT = '8080';
+      var SERVER_PORT = '80';
       return $location.protocol() + '://' + $location.host() + ':' + SERVER_PORT + '/' + suffix;
     };
 
