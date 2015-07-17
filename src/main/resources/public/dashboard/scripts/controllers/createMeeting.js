@@ -5,7 +5,7 @@
   .controller('CreateMeetingCtrl', function ($scope, roomService, pageService) {
 
     $scope.meetingName = 'My Meeting';
-    $scope.timeout = 5;
+    $scope.timeout = 300;
     $scope.alertPeriod = 10;
 
     $scope.roomCreationError = '';
