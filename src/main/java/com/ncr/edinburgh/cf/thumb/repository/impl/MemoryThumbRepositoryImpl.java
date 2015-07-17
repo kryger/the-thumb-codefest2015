@@ -115,4 +115,10 @@ public class MemoryThumbRepositoryImpl implements ThumbRepository {
 		}
 	}
 
+	@Override
+	public void resetTalk(String roomId) {
+		checkRoomExistence(roomId);
+		rooms.get(roomId).setStartTime(new Date());
+	}
+
 }

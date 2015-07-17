@@ -22,4 +22,6 @@ public interface ThumbRepository {
 	void registerVote(String roomId, Vote vote);
 
 	void startTalk(String roomId);
+
+	void resetTalk(String roomId);
 }

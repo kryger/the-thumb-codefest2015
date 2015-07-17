@@ -88,4 +88,9 @@ public class RoomServiceImpl implements RoomService {
 		thumbRepository.startTalk(roomId);
 		stompTemplate.convertAndSend("/topic/" + roomId + "/talk", true);
 	}
+
+	@Override
+	public void resetTalk(String roomId) {
+		thumbRepository.startTalk(roomId);
+	}
 }

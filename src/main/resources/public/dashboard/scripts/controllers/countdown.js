@@ -48,6 +48,7 @@
     $scope.onReset = function(){
       stop();
       $scope.timeRemaining = fullTime;
+      roomService.reset();
       start();
     };
 

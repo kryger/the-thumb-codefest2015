@@ -46,6 +46,13 @@ public class RoomController {
 		roomService.startTalk(roomId);
 	}
 
+	@RequestMapping(value = "/room/{roomId}/reset", method = RequestMethod.GET)
+	@ResponseStatus(HttpStatus.OK)
+	public @ResponseBody
+	void resetMeeting(@PathVariable final String roomId) {
+		roomService.resetTalk(roomId);
+	}
+
 	@RequestMapping(value = "/room/{roomId}/register/{userId}", method = RequestMethod.GET)
 	public Map<String, String> registerRoomUserId(
 			@PathVariable final String roomId, @PathVariable final String userId) {

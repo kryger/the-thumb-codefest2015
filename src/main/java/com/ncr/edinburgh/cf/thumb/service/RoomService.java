@@ -24,4 +24,6 @@ public interface RoomService {
 
 	void startTalk(String roomId);
 
+	void resetTalk(String roomId);
+
 }

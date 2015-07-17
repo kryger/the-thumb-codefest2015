@@ -29,6 +29,19 @@
       return deferred.promise;
     };
 
+    service.reset = function(){
+      var deferred = $q.defer();
+      $http.get( urlService.server('room/'+service.id+'/reset') ).
+        success(function() {
+          deferred.resolve();
+        })
+        .error(function(data) {
+          deferred.reject(data);
+        });
+
+      return deferred.promise;
+    };
+
     service.get = function(){
       var deferred = $q.defer();
       $http.get( urlService.server('room/'+service.id) ).
