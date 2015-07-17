@@ -1,0 +1,70 @@
+
+body {
+  margin: 0;
+}
+
+.max-height {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.max-width {
+  width: 100%;
+}
+
+.inline-flex {
+  display: inline-flex;
+}
+
+.header {
+  background: #CCC;
+  font-size: 60px;
+  text-align: center;
+  padding: 20px;
+}
+
+.flex-vertical {
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  display: flex;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.footer {
+  margin: 30px auto;
+}
+
+.content {
+  flex: 1;
+  margin: auto;
+  display: inline-flex;
+}
+
+.content-form {
+  margin: auto;
+}
+
+.title {
+  font-size: 100px;
+}
+
+.red {
+  color: red;
+}
+
+.green {
+  color: green;
+}
+
+.error {
+  color: red;
+  padding: 10px;
+  text-align: center;
+  font-size: 50px;
+}

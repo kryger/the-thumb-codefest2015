@@ -1,0 +1,111 @@
+html *
+{
+  font-family: Arial;
+  text-align: center;
+}
+
+a:link {
+  text-decoration: none;
+  color: darkblue;
+}
+
+a:visited {
+  text-decoration: none;
+  color: darkblue;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+.disabled-button {
+  opacity: 0.3;
+}
+
+.room {
+  color: #004444;
+}
+
+.footer {
+  margin: 10px auto;
+}
+
+.content {
+  flex: 1;
+  margin: auto;
+  display: inline-flex;
+}
+
+.inline-flex {
+  display: inline-flex;
+}
+
+.button {
+  padding: 15px;
+}
+
+@media screen and (max-width: 800px) {
+  .content-form {
+    margin: auto;
+  }
+}
+@media screen and (min-width: 800px) {
+  .content-form {
+    margin: 20px;
+    display: flex;
+  }
+}
+
+.button {
+  padding: 15px;
+}
+
+.header {
+  background: #CCC;
+  font-size: 44px;
+  text-align: center;
+  padding: 10px;
+}
+
+.room-select {
+  background: #EEE;
+  font-size: 40px;
+  text-align: center;
+  padding: 10px;
+}
+
+.flex-vertical {
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  display: flex;
+}
+
+
+.blue-button {
+  border: solid 1px #0076a3;
+  background: #0095cd;
+  background: linear-gradient(to bottom,  #00adee,  #0078a5);
+  filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#00adee', endColorstr='#0078a5');
+  padding: 30px 130px;
+  font-size: 30px;
+  color: white !important;
+  border-radius: 0.5em;
+  text-align: center;
+  cursor: pointer;
+}
+
+.no-rooms {
+  padding: 30px;
+  font-size: 30px;
+}
+
+.button img{
+  cursor: pointer;
+}

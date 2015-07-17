@@ -1,0 +1,18 @@
+<div class="header">
+  <div style="color:red;" ng-show="errorMessage">{{errorMessage}}</div>
+  <div ng-show="!errorMessage && !loaded">Connecting...</div>
+  <div ng-show="!errorMessage && loaded && !isStarted"><i>Meeting hasn't started</i></div>
+  <div ng-show="!errorMessage && loaded && isStarted" class="room">{{service.room.name}}</div>
+</div>
+
+<div class="content">
+  <div class="content-form">
+    <div class="button"><img ng-class="{'disabled-button' : notSelected('UP') }" src="images/thumb-up.png" title="Vote up!" ng-click="sendVote('UP')" /></div>
+    <div class="button"><img ng-class="{'disabled-button' : notSelected('DONT_CARE') }" src="images/thumb-middle.png" title="Don't care!" ng-click="sendVote('DONT_CARE')"/></div>
+    <div class="button"><img ng-class="{'disabled-button' : notSelected('DOWN') }" src="images/thumb-down.png" title="Go out!" ng-click="sendVote('DOWN')"/></div>
+  </div>
+</div>
+
+<div class="footer">
+  <a href="#/" ng-click="service.unregister()" class="blue-button">Exit</a>
+</div>

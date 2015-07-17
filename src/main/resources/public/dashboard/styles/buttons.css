@@ -1,0 +1,44 @@
+
+.blue-button {
+  border: solid 1px #0076a3;
+  background: #0095cd;
+  background: linear-gradient(to bottom,  #00adee,  #0078a5);
+  filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#00adee', endColorstr='#0078a5');
+  padding: 30px;
+  font-size: 30px;
+  color: white;
+  border-radius: 0.5em;
+  text-align: center;
+  cursor: pointer;
+}
+
+.blue-button:disabled {
+  background: #CCC !important;
+  border: 1px solid black;
+}
+
+.red-button {
+  border: solid 1px #980c10;
+  background: #d81b21;
+  background: linear-gradient(to bottom,  #ed1c24,  #aa1317);
+  filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ed1c24', endColorstr='#aa1317');
+  padding: 30px;
+  font-size: 30px;
+  color: white;
+  border-radius: 0.5em;
+  text-align: center;
+  cursor: pointer;
+}
+
+.green-button {
+  border: solid 1px #004700;
+  background: #64991e;
+  background: linear-gradient(to bottom,  #338533,  #006600);
+  filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#338533', endColorstr='#006600');
+  padding: 30px;
+  font-size: 30px;
+  color: white;
+  border-radius: 0.5em;
+  text-align: center;
+  cursor: pointer;
+}

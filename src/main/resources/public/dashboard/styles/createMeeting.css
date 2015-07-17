@@ -1,0 +1,33 @@
+
+.create-meeting {
+  width: 300px;
+}
+
+.create-meeting-field {
+  padding: 20px;
+  font-size: 50px;
+  clear: both;
+}
+
+.create-meeting-field input{
+  font-size: 50px;
+  float: right;
+  margin-left: 20px;
+}
+
+.create-meeting-error {
+  color: red;
+  padding: 10px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.field-error {
+  font-size: 30px;
+  padding: 5px 5px 10px 5px;
+  color: red;
+  clear: both;
+  float: right;
+}
+
+

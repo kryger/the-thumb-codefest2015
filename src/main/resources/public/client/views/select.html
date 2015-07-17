@@ -1,0 +1,9 @@
+<div class="header">Select Meeting</div>
+
+<div ng-repeat="room in service.rooms">
+  <div class="room-select">
+    <a ng-href="#/{{room.id}}">{{room.name}}</a> ({{room.id}})
+  </div>
+</div>
+
+<div class="no-rooms" ng-show="service.rooms.length === 0">No Current Meetings</div>

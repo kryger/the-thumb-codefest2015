@@ -1,0 +1,27 @@
+
+<div class="flex-vertical max-height">
+
+  <div class="header">Vote Result</div>
+
+  <div class="content">
+
+    <div class="content-form">
+
+      <div class="result-continue" ng-show="votePassed()" ng-click="restart()">
+        <img class="result-icon" src="./images/thumb-up.png" />
+        <span class="title result-continue-title">Please Continue</span>
+      </div>
+
+      <div class="result-stop" ng-show="voteFailed()" ng-click="restart()">
+        <img class="result-icon" src="./images/thumb-down.png" />
+        <span class="title result-stop-title">Next Item Please</span>
+      </div>
+
+      <div class="error" ng-show="voteError != ''">{{voteError}}</div>
+
+
+    </div>
+
+  </div>
+
+</div>

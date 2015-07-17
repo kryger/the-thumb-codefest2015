@@ -1,0 +1,25 @@
+
+<div class="flex-vertical max-height">
+
+  <div class="header">{{roomSession.name}} ({{roomSession.id}})</div>
+
+  <div class="content">
+
+    <div class="content-form">
+
+      <div>
+        <img class="attendee-image" src="./images/people.png" />
+        <div class="attendee-count" ng-show="attendees.length === 0">No one has joined the meeting</div>
+        <div class="attendee-count" ng-show="attendees.length === 1">{{attendees.length}} person has joined</div>
+        <div class="attendee-count" ng-show="attendees.length > 1">{{attendees.length}} people have joined</div>
+      </div>
+
+      <div class="start-meeting-error" ng-show="showStartError()">{{startError}}</div>
+
+    </div>
+
+  </div>
+
+  <div class="footer green-button" ng-click="onStartMeeting()">Start Meeting</div>
+
+</div>

@@ -1,0 +1,49 @@
+<!doctype html>
+<html class="no-js maxHeight">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Thumb Client</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <!-- build:css styles/main.css -->
+        <link rel="stylesheet" href="styles/main.css">
+        <!-- endbuild -->
+  </head>
+  <body ng-app="thumbClient" class="maxHeight">
+    <!-- Add your site or application content here -->
+    <div id="appContainer" class="container maxHeight" ng-view=""></div>
+
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/fingerprint/fingerprint.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.0.0-beta.9/sockjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+
+
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/controllers/select.js"></script>
+
+    <!-- Services -->
+    <script src="scripts/services/urlService.js"></script>
+    <script src="scripts/services/voteService.js"></script>
+    <script src="scripts/services/webSocketService.js"></script>
+    <!-- CJSA Implementations -->
+
+
+    <!-- Constants -->
+
+
+    <!-- Directives -->
+
+
+    <!-- Plugins -->
+
+    <!-- endbuild -->
+
+  </body>
+</html>

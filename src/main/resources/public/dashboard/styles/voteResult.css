@@ -1,0 +1,27 @@
+
+.result-icon {
+  display: block;
+  margin: 0 auto;
+}
+
+.result-continue-title {
+  color: white;
+}
+
+.result-stop-title {
+  color: white;
+}
+
+.result-continue {
+  background: green;
+  padding: 115px;
+  border-radius: 0.8em;
+  cursor: pointer;
+}
+
+.result-stop {
+  background: red;
+  padding: 115px;
+  border-radius: 0.8em;
+  cursor: pointer;
+}

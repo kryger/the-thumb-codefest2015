@@ -1,0 +1,38 @@
+
+<form class="flex-vertical max-height" name="createMeetingForm">
+
+  <div class="header">Dashboard</div>
+
+  <div class="content">
+
+    <div class="content-form" >
+
+      <div class="create-meeting-field">
+        <span>Meeting Name:</span>
+        <input type="text" ng-model="meetingName" name="meetingName" placeholder="e.g My Meeting" required/>
+        <div class="field-error" ng-show="createMeetingForm.meetingName.$error.required">Name is required</div>
+      </div>
+
+
+      <div class="create-meeting-field">
+        <span>Talk Timeout (sec):</span>
+        <input type="number" ng-model="timeout" min="0" name="timeout" required/>
+        <div class="field-error" ng-show="createMeetingForm.timeout.$invalid">Invalid timeout</div>
+      </div>
+
+      <div class="create-meeting-field">
+        <span>Warning Timeout (sec):</span>
+        <input type="number" ng-model="alertPeriod" min="0" name="warning" required/>
+        <div class="field-error" ng-show="createMeetingForm.warning.$invalid">Invalid warning timeout</div>
+      </div>
+
+      <div class="error" ng-show="showCreationError()">{{roomCreationError}}</div>
+
+    </div>
+
+  </div>
+
+  <input type="button" class="footer create-meeting blue-button" ng-click="onCreateMeeting()"
+    ng-disabled="canCreateMeeting(createMeetingForm) == false" value="Create Meeting" />
+
+</form>

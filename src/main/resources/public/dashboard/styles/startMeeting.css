@@ -1,0 +1,17 @@
+
+.start-meeting-id {
+
+  font-size: 50px;
+  padding: 30px;
+
+}
+
+.attendee-count {
+  font-size: 50px;
+  padding: 30px;
+}
+
+.attendee-image {
+  display: block;
+  margin: auto;
+}
