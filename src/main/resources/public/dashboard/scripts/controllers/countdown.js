@@ -25,6 +25,8 @@
 
     function outOfTime(){
       stop();
+      var gong = new Audio('./audio/gong.mp3');
+      gong.play();
       pageService.alert();
     }
 
