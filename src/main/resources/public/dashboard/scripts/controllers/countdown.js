@@ -32,7 +32,7 @@
 
     function onRoomGet(data){
 
-      $scope.timeRemaining = data.remainingSeconds;
+      $scope.timeRemaining = data.timeoutSeconds;
       fullTime = data.timeoutSeconds;
 
       start();
